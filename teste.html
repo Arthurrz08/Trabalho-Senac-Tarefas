@@ -11,7 +11,7 @@
 body{
     background-color: rgb(92, 92, 92);
 }
-.r{
+.title{
     background-color:  rgb(114, 114, 114);
     width: 1400px;
 }
@@ -19,7 +19,7 @@ i{
     padding: 10px;
 }
 .d{
-    background-color: azure;
+    background-color: rgb(247, 0, 0);
     background-color: rgb(114, 114, 114); color: antiquewhite;
 }
 select{
@@ -32,39 +32,115 @@ h1{
  text-align: center;
 }
 div{
-    border-radius: 5%;
+    border-radius: 5px;
+}
+input{
+    border-radius: 5px
+}
+select{
+    border-radius: 5px
+}
+.espaco{
+    padding-top: 30px;
+}
+.espacamento{
+    padding-right: 100;
+    padding-left: 10px;
 }
     </style>
 
 
 
 <div class="container" >
-    <div class="r" ><h1>Gerenciador de tarefas</h1></div>
-    <div>
+    <div class="title" ><h1>Gerenciador de tarefas</h1></div>
+    <div class="espaco">
         <div>
       
-            <input class="oi" size="120vz" type="text" placeholder="Escreva sua tarefa...">
+            <input class="oi" size="120vz" type="text" placeholder="Escreva sua tarefa..." >
 
-            <button type="button" class="btn btn-primary">Adicionar</button>
+            <button type="button" class="btn btn-primary" style="border-radius: 10px;">Adicionar</button>
             <select style="background-color:  rgb(114, 114, 114); color: antiquewhite;">
                 <option selected>Todas</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
+                <option value="1">Feitos</option>
+                <option value="2">Nao </option>
                 <option value="3">Three</option>
               </select>     
              </div>
+             <p class="espacamento"></p>
     </div>
+    
     <div class="d">
-        <p>Lavar a louça <button type="button" class="btn btn-success"><i class="bi bi-check-lg"></i></button><button type="button" class="btn btn-danger"><i class="bi bi-x-lg"></i></button></p>
-    </div>
-    <div class="d">
-            <p>Terminar o Trabalho <button type="button" class="btn btn-success"><i class="bi bi-check-lg"></i></button><button type="button" class="btn btn-danger"><i class="bi bi-x-lg"></i></button>
-
+        <p class="espacamento" style="display: flex; justify-content: space-between; align-items: center;">
+            Texto que a pessoa digitou 
+            <span>
+                <button type="button" class="btn btn-success"><i class="bi bi-check-lg"></i></button>
+                <button type="button" class="btn btn-danger"><i class="bi bi-x-lg"></i></button>
+            </span>
         </p>
+    </div>
+    
         
     </div>
 
 </div>
 
+<script>
+    const botaoAdicionar = document.querySelector('.btn-primary');
+    const campoTexto = document.querySelector('input[type="text"]');
+    const containerTarefas = document.querySelector('.d');
+
+    botaoAdicionar.addEventListener('click', function() {
+        const texto = campoTexto.value.trim();
+
+        if (texto !== '') {
+            const p = document.createElement('p');
+            p.className = 'espacamento';
+            p.style.display = 'flex';
+            p.style.justifyContent = 'space-between';
+            p.style.alignItems = 'center';
+            p.style.marginTop = '10px'; // Só para dar uma separada visual se quiser
+
+            const spanTexto = document.createElement('span');
+            spanTexto.textContent = texto;
+
+            const spanBotoes = document.createElement('span');
+
+            const botaoOk = document.createElement('button');
+            botaoOk.type = 'button';
+            botaoOk.className = 'btn btn-success';
+            botaoOk.innerHTML = '<i class="bi bi-check-lg"></i>';
+
+            const botaoExcluir = document.createElement('button');
+            botaoExcluir.type = 'button';
+            botaoExcluir.className = 'btn btn-danger';
+            botaoExcluir.innerHTML = '<i class="bi bi-x-lg"></i>';
+
+            // Colocar os botões dentro do span
+            spanBotoes.appendChild(botaoOk);
+            spanBotoes.appendChild(botaoExcluir);
+
+            // Colocar o texto e botões dentro do <p>
+            p.appendChild(spanTexto);
+            p.appendChild(spanBotoes);
+
+            // Adicionar o <p> na div .d
+            containerTarefas.appendChild(p);
+
+            // Limpar o campo de texto
+            campoTexto.value = '';
+
+            // Evento de marcar como concluído
+            botaoOk.addEventListener('click', function() {
+                spanTexto.style.textDecoration = 'line-through';
+                spanTexto.style.color = 'gray';
+            });
+
+            // Evento de excluir
+            botaoExcluir.addEventListener('click', function() {
+                p.remove();
+            });
+        }
+    });
+</script>
 </body>
 </html>
