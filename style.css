@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(92, 92, 92);
+}
+.title{
+    background-color:  rgb(114, 114, 114);
+    width: 1400px;
+}
+i{
+    padding: 10px;
+}
+.d{
+    background-color: rgb(247, 0, 0);
+    background-color: rgb(114, 114, 114); color: antiquewhite;
+}
+select{
+  width: 200px; 
+}
+.oi{
+    background-color: rgb(114, 114, 114); color: antiquewhite;
+}
+h1{
+ text-align: center;
+}
+div{
+    border-radius: 5px;
+}
+input{
+    border-radius: 5px
+}
+select{
+    border-radius: 5px
+}
+.espaco{
+    padding-top: 30px;
+}
+.espacamento{
+    padding-right: 100;
+    padding-left: 10px;
+}

@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   
+    <link rel="stylesheet" href="style.css">
+    <title>Gerenciador de Tarefas</title>
 </head>
 <body>
-    hellow word
+    
+    <div class="container" >
+        <div class="title" ><h1>Gerenciador de tarefas</h1></div>
+        <div class="espaco">
+            <div>
+          
+                <input class="oi" size="120vz" type="text" placeholder="Escreva sua tarefa..." >
+    
+                <button type="button" class="btn btn-primary" style="border-radius: 10px;">Adicionar</button>
+                <select style="background-color:  rgb(114, 114, 114); color: antiquewhite;">
+                    <option selected>Todas</option>
+                    <option value="1">Feitos</option>
+                    <option value="2">Nao </option>
+                  </select>     
+                 </div>
+                 <p class="espacamento"></p>
+        </div>
+        
+        <div class="d">
+            <p class="espacamento" style="display: flex; justify-content: space-between; align-items: center;">
+                Texto que a pessoa digitou 
+                <span>
+                    <button type="button" class="btn btn-success"><i class="bi bi-check-lg"></i></button>
+                    <button type="button" class="btn btn-danger"><i class="bi bi-x-lg"></i></button>
+                </span>
+            </p>
+        </div>
+        
+            
+        </div>
+    
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
