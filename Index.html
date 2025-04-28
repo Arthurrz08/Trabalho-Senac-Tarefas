@@ -4,43 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Gerenciador de Tarefas</title>
+    <title>Gerenciador de Tarefas</title> 
 </head>
 <body>
-    
-    <div class="container" >
-        <div class="title" ><h1>Gerenciador de tarefas</h1></div>
-        <div class="espaco">
-            <div>
-          
-                <input class="oi" size="120vz" type="text" placeholder="Escreva sua tarefa..." >
-    
-                <button type="button" class="btn btn-primary" style="border-radius: 10px;">Adicionar</button>
-                <select style="background-color:  rgb(114, 114, 114); color: antiquewhite;">
-                    <option selected>Todas</option>
-                    <option value="1">Feitos</option>
-                    <option value="2">Nao </option>
-                  </select>     
-                 </div>
-                 <p class="espacamento"></p>
+    <div class="container"> <!-- Container principal que organiza o layout dentro da página -->
+        <div class="title"> 
+            <h1>Gerenciador de tarefas</h1> <!-- Título da página -->
         </div>
-        
-        <div class="d">
-            <p class="espacamento" style="display: flex; justify-content: space-between; align-items: center;">
-                Texto que a pessoa digitou 
-                <span>
-                    <button type="button" class="btn btn-success"><i class="bi bi-check-lg"></i></button>
-                    <button type="button" class="btn btn-danger"><i class="bi bi-x-lg"></i></button>
-                </span>
-            </p>
-        </div>
-        
+        <div class="espaco"> <!-- Espaço para o formulário de inserção de tarefas -->
+            <div class="linha-input"> <!-- Linha contendo o campo de input e o botão para adicionar tarefa -->
+                <input class="oi" type="text" placeholder="Escreva sua tarefa..."> <!-- Campo de texto para o usuário escrever a tarefa -->
+                <button type="button" class="btn btn-primary">Adicionar</button> <!-- Botão para adicionar a tarefa -->
+                
+                <div class="filtro-container"> <!-- Container do filtro para selecionar as tarefas (feitas ou não feitas) -->
+                    <select class="select-estilizado" id="filtro"> <!-- Escolher o filtro das tarefas -->
+                        <option value="todas">Todas</option> <!-- Mostrar todas as tarefas-->
+                        <option value="feitos">Feitos</option> <!-- Mostrar tarefas feitas -->
+                        <option value="nao-feitos">Não feitos</option> <!-- Mostrar tarefas não feitas -->
+                    </select>
+
+                </div>
+            </div>
             
+            <p class="espacamento"></p> <!-- Espaçamento entre os elementos (tarefa e formulário) -->
         </div>
-    
+        <div class="d"></div> <!-- Container onde as tarefas serão exibidas -->
     </div>
-    <script src="script.js"></script>
+
+    <script src="script.js"></script> <!-- Conecta o arquivo JavaScript -->
 </body>
 </html>

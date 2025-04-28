@@ -1,39 +1,146 @@
-body{
-    background-color: rgb(92, 92, 92);
+/* Estilo para o corpo da página */
+body {
+    background-color: #2f2f2f; /* Fundo escuro */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ddd; /* Cor do texto mais clara */
 }
-.title{
-    background-color:  rgb(114, 114, 114);
-    width: 1400px;
+
+/* Estilo para o título principal */
+.title {
+    background-color: #4f4f4f; /* Cinza mais escuro */
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    color: white;
 }
-i{
+
+/* Estilo para os ícones nos botões */
+i {
+    padding: 12px;
+    color: white;
+}
+
+/* Estilo para a lista de tarefas */
+.d {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilo para cada tarefa */
+.d p {
+    width: 100%; /* Garantir que a tarefa ocupe a largura total */
+    background-color: #4f4f4f;
+    color: antiquewhite; 
     padding: 10px;
-}
-.d{
-    background-color: rgb(247, 0, 0);
-    background-color: rgb(114, 114, 114); color: antiquewhite;
-}
-select{
-  width: 200px; 
-}
-.oi{
-    background-color: rgb(114, 114, 114); color: antiquewhite;
-}
-h1{
- text-align: center;
-}
-div{
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid transparent; /* Sem borda inicialmente */
+    transition: border 0.3s ease, color 0.3s ease;
 }
-input{
-    border-radius: 5px
+
+/* Estilo para a tarefa concluída (verde) */
+.d p.concluida {
+    border-color: #28a745;  /* Bordas verdes */
+    color: #28a745;  /* Texto verde */
 }
-select{
-    border-radius: 5px
+
+/* Estilo para a tarefa pendente (amarelo) */
+.d p.pendente {
+    border-color: #ffc107;  /* Bordas amarelas */
+    color: #ffc107;  /* Texto preto */
 }
-.espaco{
+
+
+/* Estilo para o formulário de entrada */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Estilo para a linha de input e botões */
+.linha-input {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Estilo para o campo de texto onde a pessoa digita */
+.oi {
+    flex: 2;
+    padding: 15px;
+    border-radius: 12px; /* Bordas arredondadas */
+    background-color: #4f4f4f;
+    color: white;
+    border: 2px solid #495057; /* Borda cinza escuro */
+}
+
+.oi::placeholder {
+    color: white;
+}
+
+/* Estilo para o botão "Adicionar" */
+.btn-primary {
+    flex: 0 0 auto;
+    border-radius: 12px; /* Bordas arredondadas */
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilo para o filtro (select) */
+.filtro-container {
+    margin-left: auto;
+}
+
+/* Estilo para o filtro (select) */
+.select-estilizado {
+    width: 200px;
+    background-color: #4f4f4f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para o título h1 */
+h1 {
+    text-align: center;
+}
+
+/* Estilo para o espaçamento entre elementos */
+.espaco {
     padding-top: 30px;
 }
-.espacamento{
-    padding-right: 100;
-    padding-left: 10px;
+
+/* Estilo para o espaço nas tarefas */
+.espacamento {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Responsividade para telas menores (máximo 768px de largura) */
+@media (max-width: 768px) {
+    input.oi, .botao-add, .select-filtro {
+        width: 100%;
+    }
+
+    .d p {
+        width: 100%;
+    }
 }
