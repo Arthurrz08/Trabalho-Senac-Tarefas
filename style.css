@@ -47,6 +47,14 @@ i {
     transition: border 0.3s ease, color 0.3s ease;
 }
 
+/* Estilo para a data/hora da tarefa */
+.d p small {
+    color: #bbb;
+    font-size: 0.8em;
+    margin-top: 3px;
+}
+
+
 /* Estilo para a tarefa concluída (verde) */
 .d p.concluida {
     border-color: #28a745;  /* Bordas verdes */
