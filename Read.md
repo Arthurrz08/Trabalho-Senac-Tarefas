@@ -59,8 +59,13 @@ Nosso projeto adota o Modelo de Negócio baseado em Publicidade (Ad-Supported Mo
 - **Vitor**: Desenvolvedor e Colaborador no desenvolvimento e design do projeto.
 
 -Arthur: Deixo aqui algumas palavras, principalmente para dizer o quão foi dificil arranjar um jeito de fazer o código funcionar
-e ficar de um jeito onde fosse do meu agrado, nesse projeto foi sim itilizado o auxilo de I.A como no meu caso o ChatGPT, onde algumas
+e ficar de um jeito onde fosse do meu agrado, nesse projeto foi sim utilizado o auxilo de I.A como no meu caso o ChatGPT, onde algumas
 funções que eu gostaria que tivesse, eu não tinha conhecimento tive que recorrer ao uso de i.a, confesso que em alguns momentos não tive
 paciencia suficiente de parar para entender o que era o erro, só copiei e colei pois não aguentava mais quebrar a cabeça...
-  Agradeço tbm ao meu amigo Vitor que foi quem criou a base do código onde posteriormente eu vim adicionando e corrigindo alguns detalhes.
+Agradeço tbm ao meu amigo Vitor que foi quem criou a base do código onde posteriormente eu vim adicionando e corrigindo alguns detalhes.
 E por fim dizer que muita das vezes trabalho em grupo, mesmo sendo em duas pessoas tem que ter paciência kkkkk... Grato!.
+
+-Vitor: Aqui quero escrever como foi fazer esse trabalho, o trabalho me deixou varias vezes em duvida sobre como deixar ele bonito e
+funcional porque sempre que achava que estava bom, acontecia alguma coisa que dava errado, tanto na parte visual quanto na parte do 
+código. Fiquei varias vezes em duvida, mas sempre que acontecia algo de errado ia no Google e pesquisava em algum site ou pedia ajuda 
+para o ChatGPT. Um trabalho que mesmo em dupla, teve que ter 3 horas de esforço de ambas as pessoas que estavam fazendo ele.
